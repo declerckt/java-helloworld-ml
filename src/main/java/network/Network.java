@@ -1,4 +1,4 @@
-package structure;
+package network;
 
 import utils.CalculUtils;
 

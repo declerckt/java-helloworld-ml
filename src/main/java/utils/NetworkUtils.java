@@ -1,5 +1,7 @@
 package utils;
 
+import java.security.SecureRandom;
+
 public class NetworkUtils {
 
 	private NetworkUtils() {
@@ -40,12 +42,14 @@ public class NetworkUtils {
 	}
 
 	public static double randomValue(double lowerBound, double upperBound) {
-		return Math.random() * (upperBound - lowerBound) + lowerBound;
+		SecureRandom sr = new SecureRandom();
+		return sr.nextDouble() * ((upperBound - lowerBound) + lowerBound);
 	}
 
 	public static Integer[] randomValues(int lowerBound, int upperBound, int amount) {
 
 		lowerBound--;
+		SecureRandom sr = new SecureRandom();
 
 		if (amount > (upperBound - lowerBound)) {
 			return new Integer[0];
@@ -53,9 +57,9 @@ public class NetworkUtils {
 
 		Integer[] values = new Integer[amount];
 		for (int i = 0; i < amount; i++) {
-			int n = (int) (Math.random() * (upperBound - lowerBound + 1) + lowerBound);
+			int n = sr.nextInt((upperBound - lowerBound + 1) + lowerBound);
 			while (containsValue(values, n)) {
-				n = (int) (Math.random() * (upperBound - lowerBound + 1) + lowerBound);
+				n = sr.nextInt((upperBound - lowerBound + 1) + lowerBound);
 			}
 			values[i] = n;
 		}
