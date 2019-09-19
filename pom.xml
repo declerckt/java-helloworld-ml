@@ -8,6 +8,7 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonar.projectKey>declerckt_java-helloworld-ml</sonar.projectKey>
   </properties>
   <dependencies>
     <dependency>
