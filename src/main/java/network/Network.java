@@ -104,4 +104,60 @@ public class Network {
 			}
 		}
 	}
+
+	public double[][] getOutput() {
+		return output;
+	}
+
+	public void setOutput(double[][] output) {
+		this.output = output;
+	}
+
+	public double[][][] getWeights() {
+		return weights;
+	}
+
+	public void setWeights(double[][][] weights) {
+		this.weights = weights;
+	}
+
+	public double[][] getBias() {
+		return bias;
+	}
+
+	public void setBias(double[][] bias) {
+		this.bias = bias;
+	}
+
+	public double[][] getErrorSignal() {
+		return errorSignal;
+	}
+
+	public void setErrorSignal(double[][] errorSignal) {
+		this.errorSignal = errorSignal;
+	}
+
+	public double[][] getOutputDerivative() {
+		return outputDerivative;
+	}
+
+	public void setOutputDerivative(double[][] outputDerivative) {
+		this.outputDerivative = outputDerivative;
+	}
+
+	public int[] getLayerSizes() {
+		return layerSizes;
+	}
+
+	public int getInputSize() {
+		return inputSize;
+	}
+
+	public int getOutputSize() {
+		return outputSize;
+	}
+
+	public int getNetworkSize() {
+		return networkSize;
+	}
 }
